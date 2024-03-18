@@ -1,0 +1,20 @@
+{
+  "name": "streaming-plats-api",
+  "version": "0.0.0",
+  "description": "A streaming platforms api",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "rollup -c rollup.config.js"
+  },
+  "keywords": ["streaming"],
+  "author": "Rodolfo Vieira",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.13.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  }
+}
