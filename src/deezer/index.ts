@@ -5,3 +5,4 @@ export { getGenreInfo } from "./genre";
 export { getPlaylistInfo } from "./playlist";
 export { search } from "./search";
 export { getTrackInfo } from "./track";
+export { getUserInfo } from "./user";
