@@ -227,6 +227,42 @@ type DeezerChartType = {
   };
 };
 // -----------> CHART TYPES <-----------
+// <----------- PLAYLIST TYPES ----------->
+type DeezerPlaylistType = {
+  id: string;
+  title: string;
+  description: string;
+  duration: number;
+  public: boolena;
+  is_loved_track: boolena;
+  collaborative: boolena;
+  nb_tracks: number;
+  fans: number;
+  link: string;
+  share: string;
+  picture: string;
+  picture_small: string;
+  picture_medium: string;
+  picture_big: string;
+  picture_xl: string;
+  checksum: string;
+  tracklist: string;
+  creation_date: string;
+  md5_image: string;
+  picture_type: string;
+  creator: {
+    id: string;
+    name: string;
+    tracklist: string;
+    type: string;
+  };
+  type: string;
+  tracks: {
+    data: DeezerTrackType[];
+    checksum: string;
+  };
+};
+// -----------> PLAYLIST TYPES <-----------
 // <----------- GENERAL TYPES ----------->
 type DeezerResultType<T> = {
   data?: Array<T>;
