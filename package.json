@@ -1,6 +1,6 @@
 {
   "name": "streaming-plats-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A streaming platforms api",
   "main": "src/index.ts",
   "module": "dist/index.esm.js",
