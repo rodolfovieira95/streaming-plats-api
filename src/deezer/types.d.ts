@@ -1,10 +1,4 @@
 // <----------- SEARCH TYPES ----------->
-type DeezerSearchResultType = {
-  data: SearchDataType[];
-  total: number;
-  next: string;
-};
-
 type DeezerSearchOrderType =
   | "RANKING"
   | "TRACK_ASC"
@@ -209,3 +203,17 @@ type DeezerArtistType = {
 };
 
 // -----------> ARTIST TYPES <-----------
+// <----------- GENERAL TYPES ----------->
+type DeezerResultType<T> = {
+  data?: Array<T>;
+  total?: number;
+  next?: string;
+  error?: DeezerResultErrorType;
+};
+
+type DeezerResultErrorType = {
+  code: number;
+  message: string;
+  type: string;
+};
+// -----------> GENERAL TYPES <-----------

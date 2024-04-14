@@ -3,7 +3,7 @@ import { DEEZER_API_URL } from "../constants";
 export const search = async (
   query: string,
   options?: DeezerSearchOptionsType,
-): Promise<DeezerSearchResultType> => {
+): Promise<DeezerResultType<Record<string, any>>> => {
   const strictMode = options?.strict ? "?strict=on" : "";
   const order = options?.order ? `?order=${options.order}` : "";
   const hasConnection = options?.connections && options.connections.length > 0;
