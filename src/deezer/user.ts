@@ -12,3 +12,14 @@ export const getUserInfo = async (
   );
   return await result.json();
 };
+
+export const getUserPlaylists = async (
+  userId: string,
+): Promise<
+  { data: DeezerPlaylistType[] } & {
+    error?: DeezerResultErrorType;
+  }
+> => {
+  const result = await fetch(`${DEEZER_API_URL}/user/${userId}/playlists`);
+  return await result.json();
+};

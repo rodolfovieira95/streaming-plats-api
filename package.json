@@ -1,6 +1,6 @@
 {
   "name": "streaming-plats-api",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A streaming platforms api",
   "main": "src/index.ts",
   "module": "dist/index.esm.js",
@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "bundle": "rollup -c --bundleConfigAsCjs",
-    "test": "jest"
+    "test": "jest --setupFiles dotenv/config"
   },
   "keywords": ["streaming"],
   "author": "Rodolfo Vieira",
@@ -22,5 +22,8 @@
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
