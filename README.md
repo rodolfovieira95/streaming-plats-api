@@ -1,4 +1,4 @@
-# Streaming Plats API
+# Streaming Plats API (Work In Progress)
 
 Streaming Plats API is an npm package designed to simplify the process of accessing data from various music streaming platforms. With this package, developers can seamlessly integrate functionality to gather information from multiple streaming services into their applications.
 
