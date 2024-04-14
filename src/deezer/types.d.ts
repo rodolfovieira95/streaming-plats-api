@@ -137,7 +137,7 @@ type DeezerContributorType = {
 
 type DeezerTrackType = {
   id: string;
-  readable: boolean;
+  readable?: boolean;
   title: string;
   title_short: string;
   title_version: string;
@@ -203,6 +203,30 @@ type DeezerArtistType = {
 };
 
 // -----------> ARTIST TYPES <-----------
+// <----------- CHART TYPES -----------> // TO DO: Update these types with the actual query outputs
+type DeezerChartType = {
+  tracks: {
+    data: DeezerTrackType[];
+    total: number;
+  };
+  albums: {
+    data: DeezerAlbumType[];
+    total: number;
+  };
+  artists: {
+    data: DeezerArtistType[];
+    total: number;
+  };
+  playlists: {
+    data: DeezerPlaylistType[];
+    total: number;
+  };
+  podcasts: {
+    data: DeezerPodcastType[];
+    total: number;
+  };
+};
+// -----------> CHART TYPES <-----------
 // <----------- GENERAL TYPES ----------->
 type DeezerResultType<T> = {
   data?: Array<T>;
