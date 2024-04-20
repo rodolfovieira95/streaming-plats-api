@@ -1,4 +1,9 @@
-import { getUserInfo, getUserPlaylists } from "./user";
+import {
+  createPlaylist,
+  deletePlaylist,
+  getUserInfo,
+  getUserPlaylists,
+} from "./user";
 
 const yourUserAccessToken = process.env.ACCESS_TOKEN_TEST || "";
 const invalidUserToken = "123";
@@ -27,4 +32,17 @@ test("Tests getUserInfo with empty access_token", async () => {
 test("Tests getUserPlaylists with my user ID", async () => {
   const { data } = await getUserPlaylists(yourUserId);
   expect(data.length).toBeGreaterThan(0);
+});
+
+test("Tests createPlaylist and deletePlaylist", async () => {
+  const createResult = await createPlaylist(
+    yourUserAccessToken,
+    "New Playlist - RAFV",
+  );
+  expect(createResult.id).not.toBe(undefined || null);
+  const deleteResult = await deletePlaylist(
+    yourUserAccessToken,
+    createResult.id,
+  );
+  expect(deleteResult).toBe(true);
 });
